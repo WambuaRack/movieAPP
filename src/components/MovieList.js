@@ -82,7 +82,16 @@ const MovieList = () => {
                 alt={movie.Title}
                 className="moviePoster"
               />
-              <h2 className="movieTitle">{movie.Title}</h2>
+              <h2 className="movieTitle">
+                {/* Link to IMDb */}
+                <a
+                  href={`https://www.imdb.com/title/${movie.imdbID}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {movie.Title}
+                </a>
+              </h2>
               <p className="movieYear">Year: {movie.Year}</p>
             </div>
           ))}
